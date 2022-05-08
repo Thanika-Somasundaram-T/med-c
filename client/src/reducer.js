@@ -6,10 +6,13 @@ export const initialState = {
 	doctorName: '',
 	hospitalName: '',
 	location: '',
+	searchValue: '',
+	searchBy: undefined,
+	hospitals: [],
 };
 
 const reducer = ( state, action ) => {
-	console.log(state.treatment);
+	console.log(action);
 	
 	switch(action.type) {
 		case 'SET_OPTION':
@@ -48,6 +51,21 @@ const reducer = ( state, action ) => {
 					...state,
 					doctor: state.doctor.concat(action.doctorName),
 					doctorName: '',
+				});
+			case 'SET_SEARCH':
+				return ({
+					...state,
+					searchValue: action.searchValue,
+				});
+			case 'SET_SEARCH_BY':
+				return ({
+					...state,
+					searchBy: action.searchBy,
+				});
+			case 'SET_HOSPITALS':
+				return ({
+					...state,
+					hospitals: state.hospitals.concat(action.hospitals),
 				});
 			case 'RESET':
 				return ({

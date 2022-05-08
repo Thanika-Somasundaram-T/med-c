@@ -1,11 +1,12 @@
 import React from 'react';
+import Search from './search';
 
 
 const User = () => {
 
 	return(
 		<div className="user">
-			<h1>User page</h1>
+			<Search />
 		</div>
 	);
 };

@@ -1,0 +1,19 @@
+.search-by {
+	display: flex;
+	margin: 10px;
+	font-size: 0.5rem;
+	width: 25%;
+	align-items: center;
+	justify-content: left;
+}
+
+.color {
+	background-color: aqua !important;
+}
+.search-by > span {
+	margin-right: 10px;
+	background-color: white;
+	color: black;
+	padding: 5px;
+}
+
