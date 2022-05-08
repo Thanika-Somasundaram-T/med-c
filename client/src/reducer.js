@@ -1,5 +1,5 @@
 export const initialState = {
-	test: 'context api is working'
+	option: undefined,
 };
 
 const reducer = ( state, action ) => {
