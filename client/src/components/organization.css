@@ -1,0 +1,28 @@
+.organization {
+	position: absolute;
+	width: 80%;
+	top: 10%;
+	left: 20%;
+	font-size: small;
+}
+.form {
+	display: flex;
+	align-items: center;
+	margin: 20px;
+}
+
+.input {
+	border: 1px solid white;
+	flex: .6 !important;
+}
+
+.form > span {
+	color: white;
+	margin: 5px;
+	flex: .3;
+}
+
+.b {
+	display: block;
+	font-size: smaller;
+}

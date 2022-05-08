@@ -11,15 +11,8 @@ const UserSchema = new mongoose.Schema({
 		required: true,
 	},
 	ratings: Number,
-	treatment: [{
-		treatmentName: String,
-		appointmentFee: Number,
-	}],
-	doctors: [{
-		doctorName: String,
-		qualification: [],
-		treatmentOffered: [],
-	}]
+	treatment: [],
+	doctor: []
 });
 
 const HospitalModel = mongoose.model("hospitals", UserSchema);
