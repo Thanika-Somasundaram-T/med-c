@@ -13,10 +13,10 @@
 
 .input {
 	border: 1px solid white;
-	flex: .6 !important;
+	flex: .4 !important;
 }
 
-.form > span {
+.form > div, input {
 	color: white;
 	margin: 5px;
 	flex: .3;
