@@ -6,7 +6,12 @@ const reducer = ( state, action ) => {
 	console.log(action);
 	
 	switch(action.type) {
-
+		case 'SET_OPTION':
+			return ({
+				...state,
+				option: action.option,
+			});
+			
 		default:
 			return state;  
 	}

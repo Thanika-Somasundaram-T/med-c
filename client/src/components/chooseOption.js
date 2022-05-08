@@ -1,11 +1,32 @@
 import React from 'react';
+import './chooseOption.css';
+import { useDataLayerValue } from '../dataLayer';
 
 
 const ChooseOption = () => {
-
+	const [ {}, dispatch ] = useDataLayerValue();
 	return(
 		<div className="choose-option">
-			<h1>choose option</h1>
+			<div
+				onClick={ () => {
+					dispatch({
+					type: 'SET_OPTION',
+					option: true,
+					})}
+				}
+			>
+				BOOK APPOINTMENT
+			</div>
+			<div
+				onClick={ () => {
+					dispatch({
+					type: 'SET_OPTION',
+					option: false,
+					})}
+				}
+			>
+				ADD YOUR ORGANIZATION
+			</div>
 		</div>
 	);
 };

@@ -1,0 +1,26 @@
+.choose-option {
+	display: flex;
+	justify-content: space-around;
+	height: 100vh;
+	align-items: center;
+	margin: 5px;
+}
+
+.choose-option > div {
+	display: flex;
+	height: 80vh;
+	flex: 100%;
+	justify-content: center;
+	align-items: center;
+	background-color: #0000008f;
+	color: white;
+	border-radius: 99px;
+	margin: 10px;
+}
+
+.choose-option > div:hover {
+	background-color: black;
+	transition: transform 0.3s ease-in-out;
+	transform: scale(1.05);
+	overflow: hidden;
+}
