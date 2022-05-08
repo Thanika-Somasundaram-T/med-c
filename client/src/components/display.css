@@ -1,0 +1,24 @@
+.display {
+	display: grid;
+	padding: 15px;
+}
+
+.display-item {
+	display: flex;
+	align-items: center;
+	height: 20vh;
+}
+
+.display-item > div {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: white;
+	width: 90vw;
+	height: 80%;
+	border-radius: 99px;
+}
+
+span {
+	background-color: transparent;
+}
