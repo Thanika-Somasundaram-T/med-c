@@ -32,6 +32,7 @@
 .display-item span {
 	background-color: transparent;
 	margin: 10px;
+	margin-right: 10vw;
 }
 
 .display-item:hover {
@@ -40,6 +41,12 @@
 }
 
 .item:hover {
-	background-color: rebeccapurple;
 	transition: background-color 0.3s ease-in-out;
+	background:rgb(149, 161, 13);
+	border: 2px solid white;
+	color: white;
 }
+
+.item:hover > img {
+	border: 2px solid white;
+} 

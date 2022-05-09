@@ -12,7 +12,7 @@ const displayHospitals = (hospital, dispatch) => {
 				<img className="img" src="https://thumbs.dreamstime.com/b/hospital-building-modern-parking-lot-59693686.jpg" alt="img"/>
 				<span>name: { hospital.hospitalName }</span>
 				<span>location: { hospital.location }</span>
-				<span>treatment: { hospital.ratings }</span>
+				<span>ratings: { hospital.ratings }</span>
 			</div>
 		</div>
 	);
