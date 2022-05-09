@@ -1,8 +1,7 @@
 .search-by {
 	display: flex;
 	margin: 10px;
-	font-size: 0.5rem;
-	width: 25%;
+	font-size: 1rem;
 	align-items: center;
 	justify-content: left;
 }
@@ -15,5 +14,9 @@
 	background-color: white;
 	color: black;
 	padding: 5px;
+}
+
+.input {
+	color: black;
 }
 

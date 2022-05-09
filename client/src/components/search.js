@@ -5,9 +5,9 @@ import { useDataLayerValue } from '../dataLayer';
 const Search = () => {
 	const [ state, dispatch ] = useDataLayerValue();
 	return (
-		<div>
+		<div className="search">
 			<input
-				className="search"
+				className="input"
 				value={ state.searchValue }
 				onChange={ (evt) => {
 						dispatch({
