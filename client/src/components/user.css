@@ -1,0 +1,5 @@
+.user {
+	background: linear-gradient(rgb(149, 161, 13), rgb(0, 0, 0));
+	height: 100vh;
+	overflow-x: auto;
+}

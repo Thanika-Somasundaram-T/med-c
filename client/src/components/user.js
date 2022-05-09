@@ -2,6 +2,7 @@ import React from 'react';
 import Search from './search';
 import Display from './display';
 import Profile from './profile';
+import './user.css';
 import { useDataLayerValue } from '../dataLayer';
 
 const User = () => {
