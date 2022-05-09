@@ -1,13 +1,21 @@
 import React from 'react';
 import Search from './search';
 import Display from './display';
+import Profile from './profile';
+import { useDataLayerValue } from '../dataLayer';
 
 const User = () => {
+	const [ state ] = useDataLayerValue();
 
 	return(
 		<div className="user">
-			<Search />
-			<Display />
+			{ state.displayHospital 
+				? <Profile />
+				: <span>
+						<Search />
+						<Display />
+					</span>
+			}
 		</div>
 	);
 };

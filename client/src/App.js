@@ -16,7 +16,7 @@ function App() {
 				hospitals: res.data,
 			});
 		});
-	}, []);
+	}, [state.option, dispatch]);
 	return (
 		<div className="App">
 			{

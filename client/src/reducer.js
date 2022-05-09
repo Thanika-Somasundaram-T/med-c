@@ -12,10 +12,12 @@ export const initialState = {
 	searchBy: undefined,
 	hospitals: [],
 	filtered: [],
+	displayHospital: false,
+	getDetails: true,
 };
 
 const reducer = ( state, action ) => {
-	console.log(action);
+	console.log(state);
 	const searchBy = {
 		hospitals: Service.filterByHospitals(state),
 		treatment: Service.filterByTreatment(state),
@@ -76,12 +78,23 @@ const reducer = ( state, action ) => {
 					...state,
 					hospitals: action.hospitals,
 				});
+			case 'SET_DISPLAY_HOSPITAL':
+				console.log("hiiii")
+				return ({
+					...state,
+					displayHospital: !state.displayHospital,
+				});
 			case 'SET_FILTERED':
 				return ({
 					...state,
 					filtered: searchBy[state.searchBy],
 					searchBy: undefined,
 					searchValue: '',
+				});
+			case 'GET_DETAILS':
+				return ({
+					...state,
+					getDetails: !state.getDetails,
 				});
 			case 'RESET':
 				return ({
