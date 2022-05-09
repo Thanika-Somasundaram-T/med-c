@@ -5,6 +5,7 @@
 	font-size: larger;
 	font-family: cursive;
 	font-weight: bolder;
+	color: white;
 }
 .image {
 	height: 80vh;
@@ -27,4 +28,9 @@
 
 .profile-item > div {
 	margin: 10px;
+}
+
+.back {
+	width: 6vw;
+	height: 8vh;
 }

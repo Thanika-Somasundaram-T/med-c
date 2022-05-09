@@ -3,10 +3,14 @@ import './profile.css';
 import { useDataLayerValue } from '../dataLayer';
 
 const User = () => {
-	const [ { profileDetails }] = useDataLayerValue();
+	const [ { profileDetails }, dispatch ] = useDataLayerValue();
 
 	return(
 		<div className="profile">
+			<button className="back" onClick={() => { dispatch({
+				type: 'SET_DISPLAY_HOSPITAL',
+				profileDetails: '',
+			})}}>GO BACK</button>
 			<img className="image" src="https://thumbs.dreamstime.com/b/hospital-building-modern-parking-lot-59693686.jpg" alt="img"/>
 				<div className="profile-item">
 					HospitalName: { profileDetails.hospitalName }

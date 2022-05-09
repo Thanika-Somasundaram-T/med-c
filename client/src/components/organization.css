@@ -19,6 +19,7 @@
 	flex: .4;
 	border-radius: 20px;
 	padding:5px;
+	color: black;
 }
 
 .form > div, input {

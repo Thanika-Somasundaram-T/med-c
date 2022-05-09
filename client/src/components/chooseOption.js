@@ -15,7 +15,7 @@ const ChooseOption = () => {
 					})}
 				}
 			>
-				BOOK APPOINTMENT
+				SEARCH HOSPITALS
 			</div>
 			<div
 				onClick={ () => {
