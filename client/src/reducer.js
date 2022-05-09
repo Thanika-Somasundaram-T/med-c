@@ -1,3 +1,5 @@
+import Service from './service';
+
 export const initialState = {
 	option: undefined,
 	treatment: [],
@@ -9,10 +11,17 @@ export const initialState = {
 	searchValue: '',
 	searchBy: undefined,
 	hospitals: [],
+	filtered: [],
 };
 
 const reducer = ( state, action ) => {
 	console.log(action);
+	const searchBy = {
+		hospitals: Service.filterByHospitals(state),
+		treatment: Service.filterByTreatment(state),
+		location: Service.filterByLocation(state),
+	}
+	
 	
 	switch(action.type) {
 		case 'SET_OPTION':
@@ -65,7 +74,14 @@ const reducer = ( state, action ) => {
 			case 'SET_HOSPITALS':
 				return ({
 					...state,
-					hospitals: state.hospitals.concat(action.hospitals),
+					hospitals: action.hospitals,
+				});
+			case 'SET_FILTERED':
+				return ({
+					...state,
+					filtered: searchBy[state.searchBy],
+					searchBy: undefined,
+					searchValue: '',
 				});
 			case 'RESET':
 				return ({

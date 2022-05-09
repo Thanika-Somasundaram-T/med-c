@@ -10,16 +10,17 @@ const displayHospitals = (hospital) => {
 				<img className="img" src="https://thumbs.dreamstime.com/b/hospital-building-modern-parking-lot-59693686.jpg" alt="img"/>
 				<span>name: { hospital.hospitalName }</span>
 				<span>location: { hospital.location }</span>
+				<span>location: { hospital.treatment }</span>
 			</div>
 		</div>
 	);
 }
 
 const Display = () => {
-	const [ state, dispatch ] = useDataLayerValue();
+	const [ state ] = useDataLayerValue();
 	return (
 		<div className="display">
-			{ state.hospitals.map(displayHospitals) }
+			{ state.filtered.map(displayHospitals) }
 		</div>
 	);
 };
