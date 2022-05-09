@@ -1,4 +1,4 @@
-import React, { startTransition } from 'react';
+import React from 'react';
 import './organization.css';
 import { useDataLayerValue } from '../dataLayer';
 import Axios from 'axios';
@@ -69,7 +69,7 @@ const Organization = () => {
 							treatmentName: state.treatmentName,
 						})}
 					}
-				>add</div>
+				>ADD</div>
 			</div>
 			<div className="form b">
 				{ state.treatment ? state.treatment.map(makeLists) : null }
@@ -93,7 +93,7 @@ const Organization = () => {
 							})}
 						}
 					>
-						add
+						ADD
 					</div>
 			</div>
 			<div className="form b">
@@ -109,7 +109,7 @@ const Organization = () => {
 					})}
 				}
 			>
-				Submit
+				SUBMIT
 			</button>
 			<button
 			className="button"
@@ -119,7 +119,7 @@ const Organization = () => {
 				})}
 			}
 		>
-			go Back
+			GO BACK
 		</button>
 		</div>
 	);
