@@ -13,7 +13,7 @@ export const initialState = {
 	hospitals: [],
 	filtered: [],
 	displayHospital: false,
-	getDetails: true,
+	profileDetails: {},
 };
 
 const reducer = ( state, action ) => {
@@ -79,10 +79,10 @@ const reducer = ( state, action ) => {
 					hospitals: action.hospitals,
 				});
 			case 'SET_DISPLAY_HOSPITAL':
-				console.log("hiiii")
 				return ({
 					...state,
 					displayHospital: !state.displayHospital,
+					profileDetails: action.profileDetails,
 				});
 			case 'SET_FILTERED':
 				return ({
@@ -90,11 +90,6 @@ const reducer = ( state, action ) => {
 					filtered: searchBy[state.searchBy],
 					searchBy: undefined,
 					searchValue: '',
-				});
-			case 'GET_DETAILS':
-				return ({
-					...state,
-					getDetails: !state.getDetails,
 				});
 			case 'RESET':
 				return ({

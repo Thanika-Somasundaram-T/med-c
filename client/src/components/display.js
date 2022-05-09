@@ -7,6 +7,7 @@ const displayHospitals = (hospital, dispatch) => {
 		<div className="display-item">
 			<div className="item" onClick={ () => { dispatch({
 				type: 'SET_DISPLAY_HOSPITAL',
+				profileDetails: hospital,
 			})} }>
 				<img className="img" src="https://thumbs.dreamstime.com/b/hospital-building-modern-parking-lot-59693686.jpg" alt="img"/>
 				<span>name: { hospital.hospitalName }</span>
